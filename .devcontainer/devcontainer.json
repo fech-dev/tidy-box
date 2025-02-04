@@ -1,0 +1,33 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/typescript-node
+{
+  "name": "Nuxt Ui 3 + Firebase App",
+  "image": "mcr.microsoft.com/devcontainers/typescript-node:1-22-bookworm",
+  "features": {
+    "ghcr.io/devcontainers/features/java:1": {},
+    "ghcr.io/devcontainers-extra/features/pnpm": {
+      "version": "latest"
+    }
+  },
+  "mounts": ["source=pnpm-store,target=/home/node/.pnpm-store,type=volume"],
+  "initializeCommand": "./.devcontainer/commands/initialize.sh",
+  "postCreateCommand": "./.devcontainer/commands/post-create.sh",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "Vue.volar",
+        "vitest.explorer",
+        "antfu.iconify",
+        "geekabe.iconify-search",
+        "bradlc.vscode-tailwindcss",
+        "praburangki.nuxt-snippets",
+        "eamodio.gitlens",
+        "pflannery.vscode-versionlens",
+        "vivaxy.vscode-conventional-commits",
+        "YoavBls.pretty-ts-errors"
+      ]
+    }
+  }
+}
