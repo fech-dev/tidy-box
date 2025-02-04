@@ -9,6 +9,8 @@ export default defineNuxtConfig({
     "@nuxt/eslint",
   ],
 
+  ssr: false,
+
   css: ["~/assets/css/main.css"],
 
   future: {
