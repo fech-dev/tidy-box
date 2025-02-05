@@ -1,7 +1,5 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  devtools: { enabled: true },
-
   modules: [
     "@nuxt/ui",
     "nuxt-firebase-emulators",
@@ -10,14 +8,17 @@ export default defineNuxtConfig({
   ],
 
   ssr: false,
-
   css: ["~/assets/css/main.css"],
+  components: [
+    { path: '~/components', pathPrefix: false },
+  ],
 
   future: {
     compatibilityVersion: 4,
   },
-
   compatibilityDate: "2024-11-27",
+
+  devtools: { enabled: true },
 
   vuefire: {
     config: {
@@ -28,8 +29,6 @@ export default defineNuxtConfig({
       messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID,
       appId: process.env.FIREBASE_APP_ID,
     },
-    auth: {
-      enabled: true,
-    },
+    auth: { enabled: true },
   },
 });
