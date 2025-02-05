@@ -1,0 +1,13 @@
+diff --git a/dist/resolveConfig.js b/dist/resolveConfig.js
+index 9d8ce3547e8834fb8185d818419fafcf34dea577..7cfda361ee3205f30a839bc0ce017dd72fcb67ff 100644
+--- a/dist/resolveConfig.js
++++ b/dist/resolveConfig.js
+@@ -46,7 +46,7 @@ const createViteDevServerConfig = async (config, vite) => {
+         resolvedOverrides = { configFile };
+     }
+     const finalConfig = vite.mergeConfig(resolvedOverrides, makeCypressViteConfig(config, vite));
+-    debug('The resolved server config is', JSON.stringify(finalConfig, null, 2));
++    // debug('The resolved server config is', JSON.stringify(finalConfig, null, 2));
+     return finalConfig;
+ };
+ exports.createViteDevServerConfig = createViteDevServerConfig;
